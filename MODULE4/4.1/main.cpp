@@ -42,23 +42,37 @@ public:
     }
     void sum_arr(){
         //Sum of Two arrays
-        int new_size = size1 + size2;
-        int* res_arr  = new int[new_size];
-        for(int i=0;i<new_size;i++) {
-                if(i<size1){
-                    res_arr[i] = arr1[i];
-                }
-                else{
-                    res_arr[i] = arr2[i-size1];
-                }
-        }
-        cout<<"\n concatenated Array: {";
-        for(int i =0;i < new_size;++i){
+if (size1 >= size2){
+    int* res_arr = new int[size1];
+    for(int i=0; i < size1; i++){
+        if (i < size2)
+            res_arr[i] = arr1[i] + arr2[i];
+        else
+            res_arr[i] = arr1[i];
+    }
+     cout<<"\n sum of array Array: {";
+        for(int i =0;i < size1;++i){
             cout << res_arr[i] << "," ;
         }
         cout << "}";
-    }
+}
+else {
+    int* res_arr = new int[size2];
 
+    for(int i=0; i<size2; i++){
+        if (i < size1)
+            res_arr[i] = arr1[i] + arr2[i];
+        else
+            res_arr[i] = arr2[i];
+    }
+     cout<<"\n sum of array Array: {";
+        for(int i =0;i < size2;++i){
+            cout << res_arr[i] << "," ;
+        }
+        cout << "}";
+}
+
+    }
 };
 
 int main(){

@@ -44,7 +44,7 @@ public:
 	{
 	    std::cout << "Given String: " << name << std::endl;
 	    std::cout << "Lowered string: " << tolower_fun() << std::endl;
-	    this->tolowr::~tolowr();
+	    this->tolowr::~tolowr();//calling destructor explicitly
 	}
 
 int main() {

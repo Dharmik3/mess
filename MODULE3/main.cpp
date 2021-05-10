@@ -1,3 +1,4 @@
+//Basic concept of constructor and destructor
 #include<iostream>
 #include<string.h>
 using namespace std;
